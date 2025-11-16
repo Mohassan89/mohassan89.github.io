@@ -11,11 +11,19 @@
         content="workplace investigator Ontario, independent workplace investigations, harassment investigation services, Mostafa Hassan investigator, UN investigator Ontario, external workplace investigator, HR compliance investigations" />
     <title>About Alif Investigations | Independent Workplace Investigator in Ontario</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/png" href="dist/assets/Favicon.png"/>
+    <link rel="icon" type="image/png" href="dist/assets/Favicon.png" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="dist/css/styles.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDNKQ3T9FN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NDNKQ3T9FN');
+    </script>
     <style>
         /* Existing styles */
         /* Updated styles for the popup box */
@@ -279,14 +287,13 @@
                 document.getElementById('home').classList.add('active');
             } else if (currentUrl.indexOf('about.html') !== -1) {
                 document.getElementById('about').classList.add('active');
-            } else if (currentUrl.indexOf('Context.html') !== -1) {
-                document.getElementById('context').classList.add('active');
-            } else if (currentUrl.indexOf('Volunteer.html') !== -1) {
-                document.getElementById('volunteer').classList.add('active');
+            } else if (currentUrl.indexOf('Blog.html') !== -1) {
+                document.getElementById('blog').classList.add('active');
+            } else if (currentUrl.indexOf('Contact-us.html') !== -1) {
+                document.getElementById('contact').classList.add('active');
             }
         });
     </script>
 </body>
-
 
 </html>
