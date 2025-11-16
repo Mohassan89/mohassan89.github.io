@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Description (appears in Google previews) -->
+    <meta name="description"
+        content="Alif Investigations provides impartial, culturally aware workplace investigations for employers, nonprofits, and community organizations across Ontario. Led by Mostafa Hassan, a lawyer and former UN investigator, Alif delivers fair, timely, and defensible findings.">
+
+    <!-- Author -->
+    <meta name="author" content="Mostafa Hassan" />
+
+    <!-- Keywords for SEO -->
+    <meta name="keywords"
+        content="workplace investigations, harassment investigations, discrimination, external investigator, Alif Investigations, Ontario, Canada, HR compliance, Mostafa Hassan, culturally sensitive investigations, independent investigator" />
+
+    <!-- Page title -->
+    <title>Alif Investigations | Independent Workplace Investigator in Ontario</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="dist/assets/Favicon.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="dist/css/styles.css" rel="stylesheet" />
+
+    <style>
+        .justified-text {
+            text-align: left;
+        }
+
+        .lower-margin {
+            margin-bottom: 6px;
+        }
+
+        .custom-card {
+            background-color: #f8f9fa;
+        }
+
+        /* NEW STYLES FOR THE HEADING ROW */
+        .heading-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            /* remove fixed margin and balance spacing automatically */
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 30px 0;
+            /* small breathing space, not added height */
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .text-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* This centers everything vertically */
+            align-items: flex-start;
+            /* Align content to the left */
+            height: 100%;
+        }
+
+        /* Responsive behavior - UPDATED */
+        @media (max-width: 992px) {
+            .heading-row {
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+                /* Changed from center to left */
+                margin: 20px 0;
+                gap: 25px;
+            }
+
+            .logo-container {
+                margin-bottom: 15px;
+            }
+
+            .logo-container img {
+                max-height: 250px !important;
+            }
+
+            .text-content {
+                align-items: flex-start;
+                /* Changed from center to flex-start */
+            }
+        }
+
+        /* OHSA Picture styling */
+        .ohsa-picture {
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .ohsa-picture {
+                margin-top: 20px;
+                max-height: 150px !important;
+            }
+        }
+
+        /* OHSA Section Styling - COMPLETE FIX */
+        .ohsa-section-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .ohsa-responsive-container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .ohsa-card-container {
+            flex: 0 0 65%;
+        }
+
+        .ohsa-card-inner {
+            padding: 10px 20px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ohsa-card-content {
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ohsa-image-wrapper {
+            flex: 0 0 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ohsa-picture {
+            max-height: 250px;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Fix - COMPLETE SEPARATION */
+        @media (max-width: 768px) {
+            .ohsa-section-wrapper {
+                margin-bottom: 60px;
+                /* Extra space to prevent overlap */
+            }
+
+            .ohsa-responsive-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .ohsa-card-container {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+
+            .ohsa-image-wrapper {
+                flex: 0 0 100%;
+                width: 100%;
+                order: 2;
+                /* Force picture to appear AFTER card */
+            }
+
+            .ohsa-card-inner {
+                height: auto;
+                min-height: 200px;
+            }
+
+            .ohsa-picture {
+                max-height: 200px;
+                width: auto;
+                max-width: 100%;
+            }
+
+            /* Ensure cards below have proper spacing */
+            .row.gx-4.gx-lg-5 {
+                margin-top: 20px;
+            }
+        }
+
+        /* Fix mobile container and navbar issues */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .navbar .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+                max-width: 70%;
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            /* Ensure content doesn't overflow on mobile */
+            body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            /* Fix the main container layout */
+            .container.px-4.px-lg-5.d-flex.flex-column {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+        }
+
+        /* Additional navbar fixes for very small screens */
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 0.9rem;
+                max-width: 60%;
+            }
+
+            .navbar-toggler {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Ensure proper Bootstrap 4 functionality */
+        .navbar-collapse {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-6">
+            <a class="navbar-brand" href="index.html">
+                <span class="d-none d-sm-inline">Alif Investigations | Independent Workplace Investigator</span>
+                <span class="d-sm-none">Alif Investigations</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li id="home" class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li id="about" class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li id="blog" class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li id="contact" class="nav-item"><a class="nav-link" href="Contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5 d-flex flex-column"
+        style="min-height: calc(100vh - 120px); justify-content: space-between;">
+        <!-- Heading Row-->
+        <div class="heading-row" style="margin: 0;">
+            <!-- Logo Column -->
+            <div class="logo-container">
+                <img class="img-fluid rounded" src="alif_logo.png" alt="ALIF Logo"
+                    style="max-height: 335px; width: auto;" />
+            </div>
+
+            <!-- Text Column - UPDATED -->
+            <div class="text-content">
+                <p class="text-black mb-3 justified-text" style="line-height: 1.3;">
+                    At Alif Investigations, we help organizations address workplace misconduct with professionalism,
+                    discretion, and fairness. We investigate complaints of harassment, discrimination, bullying, and
+                    other employee-relations concerns so employers can make informed decisions and uphold a
+                    respectful work environment.
+                </p>
+                <p class="text-black mb-3 justified-text" style="line-height: 1.3;">
+                    Using a competent external investigator ensures the process is impartial and credible. Internal
+                    investigations can be compromised by conflicts of interest, organizational politics, or lack of
+                    specialized training. An external investigator brings neutrality, specialized expertise, and
+                    professional detachment—ensuring that both the process and the outcome stand up to scrutiny.
+                </p>
+                <a class="btn btn-primary mt-2" href="Contact us.html" target="_blank">Contact us</a>
+            </div>
+        </div>
+
+        <!-- OHSA Section with Picture - FIXED MOBILE LAYOUT -->
+        <div class="ohsa-section-wrapper">
+            <div class="ohsa-responsive-container">
+                <!-- Card -->
+                <div class="ohsa-card-container">
+                    <div class="card custom-card ohsa-card-inner">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <div class="ohsa-card-content">
+                                <p class="text-black m-0 justified-text">
+                                    The
+                                    <a href="https://www.ontario.ca/laws/statute/90o01" target="_blank"
+                                        rel="noopener noreferrer">
+                                        Occupational Health and Safety Act (OHSA)
+                                    </a>
+                                    makes the investigation of complaints of violence and harassment compulsory:
+                                </p>
+                                <p class="text-black m-0 justified-text" style="margin-top: 8px;">
+                                    <strong>32.0.7 (1)</strong> To protect a worker from workplace harassment, an
+                                    employer shall
+                                    ensure that:
+                                </p>
+                                <p class="text-black m-0 justified-text" style="margin-left: 40px; margin-top: 6px;">
+                                    (a) an investigation is conducted into incidents and complaints of workplace
+                                    harassment that is
+                                    appropriate in the circumstances;
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Picture -->
+                <div class="ohsa-image-wrapper">
+                    <img src="OHSA_Picture.png" alt="OHSA Regulation" class="ohsa-picture">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Objectivity</h2>
+                        <p class="card-text">As a trained lawyer and seasoned investigator, Mostafa Hassan brings the
+                            discipline of legal reasoning to every case — applying a structured, evidence-based approach
+                            without offering legal advice or advocacy.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-footer">
+                            <!-- Add the 'data-toggle' and 'data-target' attributes to trigger the modal -->
+                            <a class="btn btn-primary btn-sm" href="#" data-toggle="modal"
+                                data-target="#infoModal1">More Info</a>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap Modal -->
+                    <div class="modal fade" id="infoModal1" tabindex="-1" role="dialog"
+                        aria-labelledby="infoModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel1">Objectivity — Grounded in Legal
+                                        Discipline, Guided by Evidence</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body mb-4">
+                                    <!-- Content for the modal goes here -->
+                                    <p class="justified-text">
+                                        As a trained lawyer and seasoned investigator, Mostafa Hassan brings the
+                                        discipline of legal reasoning to every case — applying a structured,
+                                        evidence-based approach without offering legal advice or advocacy. At Alif
+                                        Investigations, objectivity means more than neutrality; it means assessing facts
+                                        with precision, consistency, and fairness. Each finding is supported by clear
+                                        reasoning and documented evidence, ensuring that your organization can rely on
+                                        our conclusions with confidence.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Fairness</h2>
+                        <p class="card-text">Our investigations are designed to respect the rights and dignity of all
+                            participants. We recognize that fairness builds trust — not just in the outcome, but in the
+                            organization’s commitment to doing what’s right.</p>
+                    </div>
+                    <div class="card-footer">
+                        <!-- Add the 'data-toggle' and 'data-target' attributes to trigger the modal -->
+                        <a class="btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#infoModal2">More
+                            Info</a>
+                    </div>
+                </div>
+
+                <!-- Bootstrap Modal -->
+                <div class="modal fade" id="infoModal2" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="infoModalLabel2">Procedural Fairness — Integrity in Every
+                                    Step</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mb-4">
+                                <!-- Content for the modal goes here -->
+                                <p class="justified-text">
+                                    Our investigations are designed to respect the rights and dignity of all
+                                    participants. Drawing on years of experience conducting sensitive investigations for
+                                    major international organizations, Alif Investigations ensures that both
+                                    complainants and respondents are heard equally, the process remains transparent, and
+                                    every conclusion is defensible. We recognize that fairness builds trust — not just
+                                    in the outcome, but in the organization’s commitment to doing what’s right.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Cultural Competence</h2>
+                        <p class="card-text">With professional experience spanning the United Nations, the International
+                            Criminal Court, and multiple jurisdictions worldwide, Alif Investigations approaches every
+                            matter with deep respect for cultural diversity and human complexity.</p>
+                    </div>
+                    <div class="card-footer">
+                        <!-- Add the 'data-toggle' and 'data-target' attributes to trigger the modal -->
+                        <a class="btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#infoModal3">More
+                            Info</a>
+                    </div>
+                </div>
+
+                <!-- Bootstrap Modal -->
+                <div class="modal fade" id="infoModal3" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel3"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="infoModalLabel3">Cultural Competence — Understanding Beyond
+                                    Borders</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mb-4">
+                                <!-- Content for the modal goes here -->
+                                <p class="justified-text">
+                                    With professional experience spanning the United Nations, the International Criminal
+                                    Court, and multiple jurisdictions worldwide, Alif Investigations approaches every
+                                    matter with deep respect for cultural diversity and human complexity. We understand
+                                    how language, social norms, and cultural identity influence communication and
+                                    perception. This awareness allows us to interpret behavior and testimony accurately,
+                                    minimize bias, and conduct investigations that resonate across cultures — an
+                                    essential quality in today’s diverse Canadian workplaces.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-3 bg-dark">
+        <div class="container px-4 px-lg-5">
+            <p class="m-0 text-center text-white">Copyright &copy; <a href="https://www.linkedin.com/in/mostafahassan/"
+                    target="_blank">Mostafa Hassan</a> 2025</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Core theme JS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the current page URL
+            var currentUrl = window.location.href;
+
+            // Check if the current URL contains the link for each page, and add the 'active' class accordingly
+            if (currentUrl.indexOf('index.html') !== -1) {
+                document.getElementById('home').classList.add('active');
+            } else if (currentUrl.indexOf('about.html') !== -1) {
+                document.getElementById('about').classList.add('active');
+            } else if (currentUrl.indexOf('Blog.html') !== -1) {
+                document.getElementById('blog').classList.add('active');
+            } else if (currentUrl.indexOf('Contact us.html') !== -1) {
+                document.getElementById('contact').classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
