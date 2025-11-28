@@ -30,23 +30,29 @@
         .timeline-popup {
             display: none;
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent backdrop */
+            z-index: 1000;
+        }
+
+        .timeline-popup .popup-content {
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 2vw;
-            /* Adjust the padding based on the screen size */
+            width: 90vw;
+            max-width: 1000px;
+            height: 80vh;
+            max-height: 800px;
             background-color: #fff;
             border: 1px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 90vw;
-            /* Adjust the width based on the screen size */
-            max-width: 1000px;
-            height: 80vh;
-            /* Adjust the height based on the screen size */
-            max-height: 800px;
+            padding: 2vw;
             overflow-y: auto;
-            z-index: 2;
-            /* Set a higher z-index value to make it appear above other elements */
         }
 
         .popup-close {
@@ -54,6 +60,16 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
+            z-index: 1001;
+            background: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 1px solid #ddd;
         }
 
         .underline {
@@ -76,6 +92,214 @@
             min-height: calc(100vh - 120px);
             padding-bottom: 2rem;
         }
+
+        /* ===== CAROUSEL STYLES ===== */
+        .about-carousel-container {
+            margin: 30px 0;
+        }
+
+        .about-carousel {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px 20px 20px;
+            /* Reduced bottom padding from 30px to 20px */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            /* Space for dots below */
+        }
+
+        .carousel-indicators {
+            position: relative;
+            bottom: auto;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .carousel-indicators li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #6c757d;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #007bff;
+        }
+
+        /* Hide the arrow controls */
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+
+        .carousel-item {
+            padding: 0 15px 10px;
+            /* Added bottom padding of 10px to carousel items */
+            height: 260px;
+            /* Reduced from 280px to 260px */
+            overflow-y: auto;
+            /* Allow scrolling if content overflows */
+        }
+
+        /* Reduce bottom margin for the last paragraph in each slide */
+        .carousel-item p:last-child {
+            margin-bottom: 5px;
+        }
+
+        /* Custom scrollbar styling - subtle and clean */
+        .carousel-item::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .carousel-item::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 2px;
+        }
+
+        .carousel-item::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 2px;
+        }
+
+        .carousel-item::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        /* Mobile adjustments for carousel */
+        @media (max-width: 768px) {
+            .about-carousel {
+                padding: 20px 15px 15px;
+                /* Reduced bottom padding on mobile */
+                margin-bottom: 15px;
+            }
+
+            .carousel-item {
+                height: 300px;
+                /* Reduced from 320px to 300px */
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 480px) {
+            .carousel-item {
+                height: 350px;
+                /* Reduced from 380px to 350px */
+            }
+
+            .about-carousel {
+                padding: 15px 12px 12px;
+                /* Reduced bottom padding on very small screens */
+            }
+
+            /* Adjust text sizing for very small screens */
+            .carousel-item h2 {
+                font-size: 1.3rem !important;
+                margin-top: 10px !important;
+            }
+
+            .carousel-item p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+        }
+
+        /* ===== END CAROUSEL STYLES ===== */
+
+        /* ===== FOUNDER SECTION STYLES ===== */
+        .founder-section {
+            margin: 40px 0 30px;
+        }
+
+        .founder-profile {
+            padding: 20px 0;
+        }
+
+        /* Photo alignment - properly centered for desktop */
+        .founder-photo {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* Center the photo */
+        }
+
+        .founder-profile h5 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .profile-link {
+            margin-bottom: 0;
+        }
+
+        .testimonials {
+            padding: 10px 0;
+        }
+
+        .testimonial-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .testimonial-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .testimonial-item blockquote {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-item .blockquote-footer {
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        /* Mobile adjustments for founder section */
+        @media (max-width: 768px) {
+            .founder-section {
+                margin: 30px 0 20px;
+            }
+
+            .founder-section h1 {
+                text-align: center !important;
+            }
+
+            .founder-profile {
+                text-align: center !important;
+                margin-bottom: 30px;
+            }
+
+            .testimonial-item {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .testimonial-item blockquote {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .founder-photo {
+                max-width: 180px;
+            }
+
+            .testimonial-item {
+                padding: 12px;
+            }
+        }
+
+        /* ===== END FOUNDER SECTION STYLES ===== */
 
         /* Fix mobile container and navbar issues */
         @media (max-width: 768px) {
@@ -191,61 +415,156 @@
             forms the foundation of Alif’s approach: impartial, legally informed, and deeply respectful of the people
             and organizations involved.
         </p>
-        <h2 style="margin-top: 15px;">A Personal and accessable Approach, Not a Process Factory</h2>
-        <p style="text-align: justify;">
-            When you engage Alif, you engage Mostafa directly. Every investigation — from intake to interviews to the
-            final report — is conducted personally by the founder. There are no junior associates, subcontractors, or
-            rotating investigators. Employers value this model because it ensures consistency, discretion, and personal
-            accountability throughout the process.
-        </p>
-        <p style="text-align: justify;">Unlike large firms, Alif Investigations is not a law firm. This means our role
-            is focused entirely on fact-finding, fairness, and resolution, not legal advocacy or representation. This
-            approach often feels less intimidating and more collaborative for small and mid-sized employers, nonprofits,
-            and community organizations seeking a professional yet approachable investigative service.</p>
-        <h2 style="margin-top: 15px;">Independence You Can Trust</h2>
-        <p style="text-align: justify;">
-            As a current Criminal Duty Counsel, Mostafa is professionally restricted from providing legal advice to
-            employers. This distinction safeguards true independence and impartiality, reinforcing your organization’s
-            reputation for transparency and integrity. Retaining Alif signals that your company’s priority is truth, not
-            defence — an important message to both employees and regulators. </p>
-        <h2 style="margin-top: 15px;">Flexible, Responsive, and Cost-Effective</h2>
-        <p style="text-align: justify;">
-            Alif Investigations recognizes that smaller organizations and nonprofits often lack the resources to engage
-            large law firms or consultancy practices. Our model is designed for accessibility and flexibility, offering
-            evening and weekend availability to reduce disruption and accommodate tight timelines. Every inquiry
-            receives a direct and timely response from Mostafa himself, ensuring a clear and efficient process.
-        </p>
-        <h2 style="margin-top: 15px;">Legally Informed, Culturally sensitive</h2>
-        <p style="text-align: justify;">
-            With professional experience spanning the United Nations, the International Criminal Court, and Canada’s
-            justice system, Mostafa brings a deep understanding of procedural fairness and evidence-based investigation.
-        </p>
-        <p style="text-align: justify;">
-            As a professional who has worked with diverse international teams, he approaches every matter with
-            cultural sensitivity and empathy—qualities essential for navigating today’s multicultural workplaces with
-            care and accuracy.
-        </p>
+        <div class="about-carousel-container">
+            <div class="about-carousel">
+                <div id="aboutCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <h2 style="margin-top: 15px;">A Personal and Accessible Approach, Not a Process Factory</h2>
+                            <p style="text-align: justify;">
+                                When you hire Alif, you work directly with Mostafa. He handles every step — intake,
+                                interviews, and the final report — with no juniors or subcontractors. This ensures
+                                consistent, discreet, and fully accountable service.
+                            </p>
+                            <p style="text-align: justify;">Alif is not a law firm. Our sole focus is fact-finding,
+                                fairness, and resolution, providing a process that is clear, respectful, and
+                                approachable for organizations of all sizes — including nonprofits, community groups,
+                                and large employers alike.</p>
+                        </div>
 
-        <!-- Resume content goes here -->
-        <div style="text-align: center;">
-            <h1>About Me</h1>
-            <!-- Personal Photo -->
-            <img src="Personal_Photo.JPG" alt="Mostafa Hassan"
-                style="max-width: 200px; border-radius: 50%; margin-top: 20px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
-            <h5>Mostafa Hassan</h5>
-            <p>
-                Click <span id="openPopup"
-                    style="color: #007bff; text-decoration: underline; cursor: pointer;">here</span>
-                for Mostafa's full profile
-            </p>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <h2 style="margin-top: 15px;">Independence You Can Trust</h2>
+                            <p style="text-align: justify;">
+                                As a current Criminal Duty Counsel, Mostafa is professionally restricted from providing
+                                legal advice to employers. This distinction safeguards true independence and
+                                impartiality, reinforcing your organization's reputation for transparency and integrity.
+                                Retaining Alif signals that your company's priority is truth, no defence — an important
+                                message to both employees and regulators.
+                            </p>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <h2 style="margin-top: 15px;">Flexible, Responsive, and Cost-Effective</h2>
+                            <p style="text-align: justify;">
+                                Alif Investigations recognizes that smaller organizations and nonprofits often lack the
+                                resources to engage
+                                large law firms or consultancy practices. Our model is designed for accessibility and
+                                flexibility, offering
+                                evening and weekend availability to reduce disruption and accommodate tight timelines.
+                                Every
+                                inquiry
+                                receives a direct and timely response from Mostafa himself, ensuring a clear and
+                                efficient
+                                process.
+                            </p>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <h2 style="margin-top: 15px;">Legally Informed, Culturally Sensitive</h2>
+                            <p style="text-align: justify;">
+                                With professional experience spanning the United Nations, the International Criminal
+                                Court,
+                                and Canada's
+                                justice system, Mostafa brings a deep understanding of procedural fairness and
+                                evidence-based investigation.
+                            </p>
+                            <p style="text-align: justify;">
+                                As a professional who has worked with diverse international teams, he approaches every
+                                matter with
+                                cultural sensitivity and empathy—qualities essential for navigating today's
+                                multicultural
+                                workplaces with
+                                care and accuracy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicators - NOW PROPERLY OUTSIDE the carousel box -->
+            <ol class="carousel-indicators">
+                <li data-target="#aboutCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#aboutCarousel" data-slide-to="1"></li>
+                <li data-target="#aboutCarousel" data-slide-to="2"></li>
+                <li data-target="#aboutCarousel" data-slide-to="3"></li>
+            </ol>
         </div>
 
-        <!-- Add a button to open the pop-up -->
-        <!-- <button id="openPopupButton">Open Professional Experience Timeline</button> -->
+        <!-- Resume content goes here -->
+        <!-- About the Founder - Two Column Layout -->
+        <div class="founder-section">
+            <h1 style="text-align: left; margin-bottom: 30px;">About the Founder</h1>
+
+            <div class="row">
+                <!-- Left Column - Photo & Profile -->
+                <div class="col-lg-4 col-md-5">
+                    <div class="founder-profile text-center">
+                        <img src="Personal_Photo.JPG" alt="Mostafa Hassan" class="founder-photo" />
+                        <h5 style="text-align: center;">Mostafa Hassan</h5>
+                        <p class="profile-link" style="text-align: center;">
+                            Click <span id="openPopup"
+                                style="color: #007bff; text-decoration: underline; cursor: pointer;">here</span>
+                            for Mostafa's full profile
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column - Testimonials -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="testimonials">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item">
+                            <blockquote class="blockquote">
+                                <p class="mb-2" style="font-style: italic;">"Mostafa's excellent legal and factual
+                                    analysis and clear reports have
+                                    been extremely important to me in my investigative decision making. Mostafa
+                                    demonstrated excellent skills in locating, collating and analysing large amounts of
+                                    material and coming to reasoned and defensible conclusions."</p>
+                                <footer class="blockquote-footer">Investigation Team Leader, <strong>International
+                                        Criminal Court</strong></footer>
+                            </blockquote>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-item">
+                            <blockquote class="blockquote">
+                                <p class="mb-2" style="font-style: italic;">"Mostafa respects due process and follows
+                                    applicable professional
+                                    standards and practices in conducting investigations. He has strong investigative
+                                    skills."</p>
+                                <footer class="blockquote-footer">Chief of Investigation, <strong>United
+                                        Nations</strong></footer>
+                            </blockquote>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-item">
+                            <blockquote class="blockquote">
+                                <p class="mb-2" style="font-style: italic;">"Crown* has proven all the essential
+                                    elements of the offence."</p>
+                                <footer class="blockquote-footer">
+                                    <strong>Ontario Court of Justice</strong> decision in a sexual assault case<br>
+                                    *Mostafa appeared as Assistant Crown Attorney.
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup with backdrop -->
         <div id="popup" class="timeline-popup">
-            <span class="popup-close" onclick="closePopup()">X</span>
-            <!-- Include the content of the popup HTML -->
-            <iframe src="Mostafa_popup.html" style="width: 100%; height: 100%; border: none;"></iframe>
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">X</span>
+                <!-- Include the content of the popup HTML -->
+                <iframe src="Mostafa_popup.html" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
         </div>
     </div> <!-- Close the main content container -->
 
@@ -292,6 +611,19 @@
             } else if (currentUrl.indexOf('Contact-us.html') !== -1) {
                 document.getElementById('contact').classList.add('active');
             }
+        });
+    </script>
+
+    <script>
+        // Fix for carousel indicators active state
+        document.addEventListener('DOMContentLoaded', function () {
+            $('#aboutCarousel').on('slide.bs.carousel', function (e) {
+                var indicators = document.querySelectorAll('.carousel-indicators li');
+                indicators.forEach(function (indicator) {
+                    indicator.classList.remove('active');
+                });
+                indicators[e.to].classList.add('active');
+            });
         });
     </script>
 </body>
